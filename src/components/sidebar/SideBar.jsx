@@ -4,14 +4,14 @@ function SideBar() {
   return (
     <div className={style.header}>
       <div className={style.header__imgBox}>
-        <img src="../public/images/logo-large.svg" alt="image of logo" />
+        <img src="../images/logo-large.svg" alt="image of logo" />
       </div>
       <nav className={style.header__nav}>
         <ul className={style.header__list}>
           <button className={style.header__btn}>
             <img
               className={style.button__img}
-              src="../public/images/icon-nav-overview.svg"
+              src="../images/icon-nav-overview.svg"
               alt="icon of overview"
             />
             <Link className={style.header__link} to="/overview">
@@ -21,7 +21,7 @@ function SideBar() {
           <button className={style.header__btn}>
             <img
               className={style.button__img}
-              src="../public/images/icon-nav-transactions.svg"
+              src="../images/icon-nav-transactions.svg"
               alt="icon of transactions"
             />
             <Link className={style.header__link} to="/transactions">
@@ -31,7 +31,7 @@ function SideBar() {
           <button className={style.header__btn}>
             <img
               className={style.button__img}
-              src="../public/images/icon-nav-budgets.svg"
+              src="../images/icon-nav-budgets.svg"
               alt="icon of budgets"
             />
             <Link className={style.header__link} to="/budgets">
@@ -41,7 +41,7 @@ function SideBar() {
           <button className={style.header__btn}>
             <img
               className={style.button__img}
-              src="../public/images/icon-nav-pots.svg"
+              src="../images/icon-nav-pots.svg"
               alt="icon of posts"
             />
             <Link className={style.header__link} to="/posts">
@@ -51,7 +51,7 @@ function SideBar() {
           <button className={style.header__btn}>
             <img
               className={style.button__img}
-              src="../public/images/icon-nav-recurring-bills.svg"
+              src="../images/icon-nav-recurring-bills.svg"
               alt="icon of recurringBils"
             />
             <Link className={style.header__link} to="/recurringBills">
@@ -63,7 +63,7 @@ function SideBar() {
       <div className={style.headerMenu__box}>
         <img
           className={style.header__menuImg}
-          src="../public/images/icon-minimize-menu.svg"
+          src="../images/icon-minimize-menu.svg"
           alt="img of minimaze menu"
         />
         <Link className={style.headerMenu__link}>Minimize Menu</Link>
