@@ -1,0 +1,75 @@
+@import "../../scss/variable";
+
+.footerBar {
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerBar__box {
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+  padding-top: 0.8rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border-radius: 8px 8px 0 0;
+}
+
+.footerBar__box:hover {
+  background-color: $white;
+}
+
+.footerBar__box:hover .footerBar__link {
+  color: $grey-900;
+}
+
+.footerBar__link {
+  font-weight: 700;
+  font-size: $text-preset-5;
+  line-height: $line-height-150;
+  letter-spacing: 1px;
+  color: $beige-500;
+}
+
+// Media
+@media (max-width: 900px) {
+  .footerBar {
+    display: flex;
+    flex-wrap: wrap;
+    height: inherit;
+    background-color: $grey-900;
+    color: $white;
+    padding-top: 0.8rem;
+    padding-right: 4rem;
+    padding-left: 4rem;
+  }
+}
+
+@media (max-width: 490px) {
+  .footerBar {
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+
+  .footerBar__link {
+    display: none;
+  }
+
+  .footerBar {
+    padding-top: 0.8rem;
+    padding-right: 1.6rem;
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width: 385px) {
+  .footerBar {
+    padding-top: 0.8rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}

@@ -1,0 +1,25 @@
+@import "../../scss/variable";
+
+.form__input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+
+  span {
+    color: $grey-500;
+    font-size: $text-preset-5;
+  }
+
+  input {
+    width: 100%;
+    font-family: inherit;
+    padding: 1.2rem 2rem;
+    border-radius: 0.8rem;
+    border: 1px solid $grey-500;
+    font-size: 1.4rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

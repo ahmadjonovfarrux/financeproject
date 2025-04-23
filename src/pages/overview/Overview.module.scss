@@ -1,0 +1,148 @@
+@import "../../scss/variable";
+
+.overview {
+  height: 100vh;
+  padding: 4rem;
+  background-color: $beige-100;
+  color: $grey-900;
+}
+
+.overview__title {
+  font-size: $text-preset-1;
+  font-weight: 700;
+  line-height: $line-height-100;
+  margin-bottom: 3.2rem;
+}
+
+.overview__balanceBox {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  margin-bottom: 3.2rem;
+}
+
+.overview__balanceCard {
+  max-width: 300px;
+  width: 100%;
+  padding: 2.4rem;
+  background-color: $white;
+  border-radius: 1.2rem;
+}
+
+.firstCard {
+  background-color: $grey-900;
+  color: $white;
+}
+
+.card__subtitle {
+  font-size: $text-preset-4;
+  font-weight: 400;
+  line-height: $line-height-150;
+}
+
+.card__title {
+  margin-top: 1.2rem;
+  font-size: $text-preset-1;
+  line-height: $line-height-100;
+}
+
+// Media
+
+@media (max-width: 1030px) {
+  .overview__balanceBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+// Pots
+.overview__pots {
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  padding: 3.2rem;
+  border-radius: 1.2rem;
+}
+
+.pots__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.pots__title {
+  font-size: $text-preset-2;
+  line-height: $line-height-100;
+}
+
+.pots__details {
+  font-size: $text-preset-4;
+  line-height: $line-height-100;
+  color: $grey-500;
+}
+
+.pots__savingWrapper {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.pots__totalSaving {
+  max-width: 240px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1.6rem;
+  padding: 2rem;
+  background-color: $beige-100;
+  border-radius: 1.2rem;
+}
+
+.pots__totalCard__text {
+  font-size: $text-preset-4;
+  line-height: $line-height-150;
+  margin-bottom: 1.1rem;
+  color: $grey-500;
+}
+
+.pots__totalCard__title {
+  font-size: $text-preset-1;
+  line-height: $line-height-100;
+}
+
+.pots__cardWrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 130px);
+  flex-wrap: wrap;
+  gap: 1.6rem;
+}
+//
+
+.pots__card {
+  max-width: 130px;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  gap: 1.6rem;
+}
+
+.pots__color {
+  width: 5px;
+  border-radius: 2px;
+  background-color: $green;
+}
+
+// Media
+@media (max-width: 930px) {
+  .pots__cardWrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+  }
+}

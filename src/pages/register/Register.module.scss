@@ -1,0 +1,92 @@
+// @import "../../scss/variable";
+
+// body {
+//   background-color: $grey-100;
+// }
+
+// .register {
+//   display: flex;
+//   display: grid;
+//   grid-template-columns: 480px 1fr;
+//   height: 100vh;
+//   padding: 1rem;
+//   gap: 1rem;
+// }
+
+// .register__imgBox {
+//   padding: 4rem;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: start;
+//   justify-content: space-between;
+//   background-image: url(../../../public/images/illustration-authentication.svg);
+//   background-repeat: no-repeat;
+//   // background-position: center;
+//   // background-size: center;
+//   color: $white;
+// }
+
+// .register__title {
+//   font-weight: 700;
+//   font-size: $text-preset-1;
+//   line-height: $line-height-100;
+//   margin-bottom: 2.4rem;
+// }
+
+// .register__text {
+//   font-weight: 400;
+//   font-size: $text-preset-4;
+//   line-height: $line-height-150;
+// }
+
+// .register__fForm {
+//   position: fixed;
+//   left: 70%;
+//   top: 50%;
+//   transform: translate(-50%, -50%);
+//   display: flex;
+//   flex-direction: column;
+//   gap: 0.5rem;
+//   width: 500px;
+//   background-color: $white;
+//   padding: 3.2rem;
+// }
+
+// .register__form__title {
+//   font-weight: 700;
+//   font-size: $text-preset-1;
+//   line-height: $line-height-100;
+//   color: $grey-900;
+//   margin-bottom: 2.7rem;
+// }
+
+// label {
+//   color: $grey-900;
+// }
+
+// input {
+//   height: 4.5rem;
+//   border-radius: 8px;
+//   margin-bottom: 1.2rem;
+//   border: 1px solid $grey-900;
+// }
+
+// button {
+//   height: 5rem;
+//   margin-top: 3rem;
+//   background-color: $grey-900;
+//   color: $white;
+//   border-radius: 8px;
+// }
+
+// .register__form__text {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   margin-top: 3.2rem;
+// }
+
+// .register__link {
+//   color: $grey-900;
+//   text-decoration: underline;
+// }
