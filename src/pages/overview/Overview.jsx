@@ -1,3 +1,4 @@
+import Chart from "../../components/Chart";
 import { useCollectionsData } from "../../hooks/useCollectionsData";
 import style from "./Overview.module.scss";
 
@@ -57,6 +58,10 @@ function Overview() {
               })}
           </div>
         </div>
+      </div>
+      {/* Pie chart */}
+      <div>
+        <Chart />
       </div>
     </div>
   );
