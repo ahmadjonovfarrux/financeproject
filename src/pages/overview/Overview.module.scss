@@ -158,6 +158,70 @@
 // overview__stitics
 .overview__statics {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.content__link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+// Transactions
+.transactions {
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  background-color: $white;
+  border-radius: 1.2rem;
+  padding: 3rem;
+}
+
+.transactions__content {
+  width: 100%;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
+
+  span {
+    color: black;
+  }
+}
+
+.transactions__box {
+  width: 42rem;
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  p {
+    display: inline-block;
+  }
+}
+
+.transactions__title {
+  font-size: $text-preset-2;
+  font-weight: 700;
+  color: $grey-900;
+}
+
+.imgBox {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-right: auto;
+}
+
+.box__img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.box__title {
+  font-weight: 700;
 }

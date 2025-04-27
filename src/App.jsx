@@ -68,7 +68,7 @@ function App() {
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
-      console.log(user && user);
+      // console.log(user && user);
       if (user && user.displayName && user.photoURL) {
         dispatch(login(user));
       }
