@@ -46,10 +46,14 @@ main {
   height: 100vh;
 }
 
-.main-layout {
+.main_layout {
   display: flex;
   display: grid;
   grid-template-columns: 300px 1fr;
+}
+
+.main__layout.sidebar {
+  grid-template-columns: 1fr;
 }
 
 .container {
