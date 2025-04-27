@@ -1,4 +1,5 @@
-import Chart from "../../components/Chart";
+import { Link } from "react-router-dom";
+// import Chart from "../../components/Chart";
 import { useCollectionsData } from "../../hooks/useCollectionsData";
 import style from "./Overview.module.scss";
 
@@ -60,9 +61,41 @@ function Overview({ showSidebar }) {
             </div>
           </div>
         </div>
-        {/* Pie chart */}
+        {/* transactions */}
         <div>
-          <Chart />
+          <div className={style.transactions}>
+            <div className={style.transactions__content}>
+              <h3 className={style.transactions__title}>Transactions</h3>
+              <Link to="/transactions" className="content__link">
+                <span>See Details</span>
+                <img src="../images/icon-caret-right.svg" alt="right icon" />
+              </Link>
+            </div>
+            <div>
+              {data &&
+                data.transactions.slice(0, 5).map((d) => {
+                  return (
+                    <div key={d.id} className={style.transactions__box}>
+                      <div className={style.imgBox}>
+                        <img
+                          className={style.box__img}
+                          src={d.avatar}
+                          alt={d.name}
+                        />
+                        <h3 className={style.box__title}>{d.name}</h3>
+                      </div>
+                      <p
+                        className={`${style.box__price} ${
+                          d.amount > 0 ? "green" : "black"
+                        }`}
+                      >
+                        {d.amount}$
+                      </p>
+                    </div>
+                  );
+                })}
+            </div>
+          </div>
         </div>
       </div>
     </div>

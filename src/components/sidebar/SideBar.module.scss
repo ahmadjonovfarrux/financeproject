@@ -124,9 +124,10 @@
   height: 2.4rem;
 }
 
-// // Media
-// @media (max-width: 900px) {
-//   .header {
-//     display: none;
-//   }
-// }
+// Media
+
+@media (max-width: 900px) {
+  .header__media {
+    display: none;
+  }
+}
