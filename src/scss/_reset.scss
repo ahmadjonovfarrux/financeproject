@@ -46,14 +46,34 @@ main {
   height: 100vh;
 }
 
+// layout main class
+.main.sidebar {
+  padding-left: 100px;
+}
+
+// layout global styles
 .main_layout {
   display: flex;
   display: grid;
   grid-template-columns: 300px 1fr;
 }
 
-.main__layout.sidebar {
+.main_layout.sidebar {
   grid-template-columns: 1fr;
+}
+
+// header global styles
+.header {
+  background-color: $grey-900;
+  color: $white;
+  height: 100vh;
+  width: 300px;
+  transition: 0s ease;
+}
+
+.header.sidebar {
+  position: absolute;
+  width: 88px;
 }
 
 .container {
@@ -72,4 +92,24 @@ main {
     flex-direction: column;
     grid-template-columns: 1fr;
   }
+}
+
+.chartWrapper {
+  max-width: 400px;
+  width: 100%;
+  padding: 2.5rem;
+  background-color: $white;
+}
+
+.chartWrapper__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.content__link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
