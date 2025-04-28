@@ -1,0 +1,21 @@
+.transactions {
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8rem;
+}
+
+.transactions__miniContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.miniContainer__img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
