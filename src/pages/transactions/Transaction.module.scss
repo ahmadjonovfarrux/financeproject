@@ -1,11 +1,52 @@
+@import "../../scss/variable";
+
 .transactions {
   width: 100%;
   height: 100vh;
   overflow-y: auto;
+  padding: 4rem;
+}
+
+.transactions__option {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.transactions__option > input {
+  display: inline-block;
+  padding: 1.2rem 2rem;
+  border-radius: 0.6rem;
+  border: 1px solid $grey-500;
+  margin-right: auto;
+}
+
+.transactions__sort > select,
+.transactions__category > select {
+  margin: 0 5rem 0 1rem;
+  padding: 1.2rem 2rem;
+  border-radius: 0.8rem;
+  font-weight: 400;
+}
+
+.transactions__category > select {
+  margin: 0 0 0 1rem;
+}
+
+.transactions__List {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3.6rem;
+  margin-bottom: 3.6rem;
+}
+
+.transactionsMapped__Box {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 8rem;
+  gap: 2rem;
 }
 
 .transactions__miniContainer {
@@ -14,8 +55,49 @@
   justify-content: space-between;
 }
 
+.miniContainer__imgBox {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
 .miniContainer__img {
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
+}
+
+.miniContainer__title {
+  color: black;
+}
+
+.miniContainer__category {
+  text-align: center;
+}
+
+.hidden__category,
+.transactions__option > img {
+  display: none;
+}
+
+@media (max-width: 505px) {
+  .transactions__option {
+    margin-bottom: 2.5rem;
+
+    .transactions__category,
+    .transactions__sort {
+      display: none;
+    }
+  }
+
+  .miniContainer__category,
+  .miniContainer__date,
+  .transactions__List {
+    display: none;
+  }
+
+  .hidden__category {
+    display: flex;
+    margin-top: 0.4rem;
+  }
 }

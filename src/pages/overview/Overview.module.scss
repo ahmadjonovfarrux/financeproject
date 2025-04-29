@@ -287,14 +287,10 @@
   .transactions__box {
     margin-right: auto;
   }
+}
 
-  // .transactions__wrapper {
-  //   max-width: 800px;
-  //   width: 100%;
-  // }
-
-  // .transactions {
-  //   max-width: 800px;
-  //   width: 100%;
-  // }
+@media (max-width: 485px) {
+  .overview {
+    padding: 0;
+  }
 }
