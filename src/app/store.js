@@ -10,3 +10,6 @@ export const store = configureStore({
       serializableCheck: false,
     }),
 });
+
+// Tablar aro sixronizatsiya
+// 
