@@ -169,8 +169,9 @@ main {
   display: flex;
 }
 
-// @media (max-width: 605px) {
-//   .header.sidebar {
-//     width: 0;
-//   }
-// }
+@media (max-width: 605px) {
+  .header__media {
+    width: 0;
+    display: none;
+  }
+}

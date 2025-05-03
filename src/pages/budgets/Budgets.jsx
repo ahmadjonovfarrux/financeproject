@@ -2,9 +2,9 @@ import { useState } from "react";
 import style from "./Budgets.module.scss";
 import ReactApexChart from "react-apexcharts";
 import { useCollection } from "../../hooks/useCollection";
-import { useCollectionsData } from "../../hooks/useCollectionsData";
 import chroma from "chroma-js";
 import Select from "react-select";
+import { Link } from "react-router-dom";
 
 // import { ColourOption, colourOptions } from "./docs/data";
 
@@ -13,6 +13,7 @@ function Budgets() {
   const [modal, setModal] = useState(false);
   const [module, setModule] = useState(false);
   const { data: budgets } = useCollection("budgets");
+  const { data: transactions } = useCollection("transactions");
 
   const colourOptions = [
     { value: "ocean", label: "Ocean", color: "#00B8D9", used: false },
@@ -137,6 +138,7 @@ function Budgets() {
   };
   return (
     <div className={style.budgets}>
+      {/* budgets head */}
       <div className={style.budgets__head}>
         <h2 className={style.budgets__title}>Budgets</h2>
         <div className={style.budgets__btnBox}>
@@ -247,42 +249,97 @@ function Budgets() {
             </div>
             <div id="html-dist"></div>
           </div>
-          <h3 className={style.budgets__spendingTitle}>Spending Summery</h3>
-          <div className={style.budgets__summery}>
-            {budgets &&
-              budgets.map((b) => {
-                return (
-                  <div
-                    key={b.id}
-                    style={{
-                      borderLeft: `3px solid ${b.theme}`,
-                    }}
-                    className={style.summeryBox}
-                  >
-                    <h4>{b.category}</h4>
-                    <p>
-                      <span>${b.maximum / 5}</span> of {b.maximum}
-                    </p>
-                  </div>
-                );
-              })}
+          <div>
+            <h3 className={style.budgets__spendingTitle}>Spending Summery</h3>
+            <div className={style.budgets__summery}>
+              {budgets &&
+                budgets.map((b) => {
+                  return (
+                    <div
+                      key={b.id}
+                      style={{
+                        borderLeft: `3px solid ${b.theme}`,
+                      }}
+                      className={style.summeryBox}
+                    >
+                      <h4>{b.category}</h4>
+                      <p>
+                        <span>${b.maximum / 5}</span> of {b.maximum}
+                      </p>
+                    </div>
+                  );
+                })}
+            </div>
           </div>
         </div>
         {/* Category */}
-        <div>
+        <div className={style.budgets__categoryWrapper}>
           {budgets &&
             budgets.map((b) => {
               return (
-                <div key={b.id} className={style.categoryWrapper}>
-                  <div className={style.miniContainer__head}>
-                    <h2 className={style.miniContainer__title}>
-                      <div className={`${style.miniContainer__dot}`}></div>
+                <div key={b.id} className={style.category__Boxes}>
+                  <div className={style.categoryBox__head}>
+                    <h2 className={style.categoryBox__title}>
+                      <div
+                        className={`${style.categoryBox__dot}`}
+                        style={{ backgroundColor: `${b.theme}` }}
+                      ></div>
                       {b.category}
                     </h2>
                     <img
                       src="../images/icon-ellipsis.svg"
                       alt="image of dotes"
                     />
+                  </div>
+                  <p>Maximum of {b.maximum}</p>
+                  <div className={style.categoryBox__progress}>
+                    <div
+                      className={style.categoryBox__innerB}
+                      style={{
+                        backgroundColor: `${b.theme}`,
+                      }}
+                    ></div>
+                  </div>
+                  <div className={style.category__info}>
+                    <div
+                      className={style.spent__info}
+                      style={{
+                        borderLeftColor: `${b.theme}`,
+                      }}
+                    >
+                      <p>Spent</p>
+                      <h4>35</h4>
+                    </div>
+                    <div className={style.remaining__info}>
+                      <p>Remaining</p>
+                      <h4>{b.maximum - 35}</h4>
+                    </div>
+                  </div>
+                  <div className={style.spending__wrapper}>
+                    <h4>
+                      Latest Spending{" "}
+                      <span>
+                        <Link to="/" className={style.spending__link}>
+                          See All
+                          <img
+                            src="../images/icon-caret-right.svg"
+                            alt="image of right icon"
+                          />
+                        </Link>
+                      </span>
+                    </h4>
+                    <div className={style.spendedPeople}>
+                      {transactions &&
+                        transactions.slice(0, 3).map((t) => {
+                          return (
+                            <div className={style.spentPerson}>
+                              <img src={t.avatar} alt="image of person" />
+                              <h4>{t.name}</h4>
+                              <span>-$5.00</span>
+                            </div>
+                          );
+                        })}
+                    </div>
                   </div>
                 </div>
               );

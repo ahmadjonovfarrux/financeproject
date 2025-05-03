@@ -2,7 +2,7 @@ import style from "./SideBar.module.scss";
 import { Link } from "react-router-dom";
 function SideBar({ showSidebar, setShowSidebar }) {
   return (
-    <div className={style.header__media}>
+    <div className="header__media">
       <div className={`header ${showSidebar ? "sidebar" : ""}`}>
         <div className={style.header__imgBox}>
           <Link to="/">
