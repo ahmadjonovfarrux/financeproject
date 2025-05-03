@@ -80,12 +80,13 @@
 .budgets__spendingSum {
   max-width: 400px;
   width: 100%;
+  height: fit-content;
   background-color: $white;
   display: flex;
   flex-direction: column;
+  justify-self: center;
   padding: 3rem;
   border-radius: 1.2rem;
-
   #my-chart {
     align-items: center;
   }
@@ -132,12 +133,155 @@
   gap: 1rem;
 }
 
-@media (max-width: 1030px) {
-  .budgets__body {
+// CategoryWrapper
+.budgets__categoryWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.category__Boxes {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  background-color: $white;
+  color: $grey-900;
+  gap: 2rem;
+  border-radius: $spacing-150;
+
+  p {
+    font-size: $text-preset-4;
+    line-height: $line-height-150;
+    color: $grey-500;
+  }
+
+  .categoryBox__progress {
+    width: 100%;
+    height: 2.4rem;
+    background-color: $beige-100;
+
+    .categoryBox__innerB {
+      width: 40%;
+      height: inherit;
+    }
+  }
+
+  .category__info {
+    display: flex;
+    align-items: center;
+  }
+
+  .spent__info {
+    width: 50%;
+    padding-left: 1.6rem;
+    border-left: 3px solid;
+  }
+  .remaining__info {
+    width: 50%;
+    padding-left: 1.6rem;
+    border-left: 3px solid $beige-100;
+  }
+
+  .spending__wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    padding: 2rem;
+    background-color: $beige-100;
+    border-radius: $spacing-150;
+    gap: 2rem;
+
+    h4 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: $text-preset-3;
+      line-height: $line-height-150;
+      font-weight: 700;
+      color: $grey-900;
+    }
+
+    .spending__link {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: $text-preset-4;
+      line-height: $line-height-150;
+      color: $grey-500;
+      font-weight: 400;
+    }
+
+    .spendedPeople {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .spentPerson {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 3.2rem;
+        height: 3.2rem;
+        border-radius: 50%;
+        margin-right: 1.6rem;
+      }
+
+      h4 {
+        font-size: $text-preset-5;
+        line-height: $line-height-150;
+        font-weight: 700;
+        color: $grey-900;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+.categoryBox__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .categoryBox__title {
+    display: flex;
     align-items: center;
+    gap: 1.6rem;
+    font-size: $text-preset-2;
+    font-weight: 700;
+    line-height: $line-height-100;
+  }
+
+  .categoryBox__dot {
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+  }
+}
+
+@media (max-width: 1030px) {
+  .budgets__body {
+    grid-template-columns: 1fr;
     gap: 2.4rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .budgets {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
+  .budgets__spendingSum {
+    width: 320px;
+  }
+
+  #my-chart {
+    width: 300px;
+  }
+}
+
+@media (max-width: 440px) {
+  .spentPerson img {
+    display: none;
   }
 }
